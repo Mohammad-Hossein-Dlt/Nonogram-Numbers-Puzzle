@@ -114,4 +114,6 @@ class Button(tk.Button):
             if r==0: 
                 for i in self.gameFrame.Nonepoints:
                     if i[1] == self.point[1] : self.gameFrame.btns[i].configure(background= "#FF0000", state= "disabled", text= 'X')
-            if len(self.gameFrame.truePoints) == 0: self.gameFrame.providedBy.configure(text= "      You Win...      " )
+            if len(self.gameFrame.truePoints) == 0: 
+                self.gameFrame.providedBy.configure(text= "      You Win...      " )
+                Button.mistaketimes = 0
